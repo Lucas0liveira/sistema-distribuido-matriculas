@@ -1,0 +1,35 @@
+{
+  "name": "trabalho-lbd",
+  "version": "1.0.0",
+  "description": "Uma aplicação web para listar seus livros",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas0liveira/Bookfull.git"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "Leonardo Oliveira Freitas & Lucas Oliveira Freitas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucas0liveira/Bookfull/issues"
+  },
+  "homepage": "https://github.com/Lucas0liveira/Bookfull#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6",
+    "sequelize-cli": "^6.2.0"
+  }
+}
