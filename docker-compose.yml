@@ -1,0 +1,50 @@
+version: '3.3'
+
+services:
+  api-matriculas:
+    image: node:14
+    container_name: api-matriculas
+    working_dir: /app
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./api:/app
+    depends_on:
+      - db
+    command: bash -c "yarn && yarn start"
+
+  web-matriculas:
+    image: node:14
+    container_name: web-matriculas
+    working_dir: /app
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./web:/app
+    depends_on: 
+      - api-matriculas
+    command: bash -c "yarn && yarn serve"
+
+  db:
+    image: postgres
+    container_name: db-matriculas
+    environment: 
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./.db:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-matriculas
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+      - PGADMIN_LISTEN_PORT=5050
+    ports:
+      - "5050:5050"
+      
+
+volumes:
+  postgresql:
+        
