@@ -13,8 +13,8 @@ routes.get('/', (req, res) => res.json({ hello: 'world' }));
 routes.get('/aluno', AlunoController.indexAll);
 routes.get('/aluno/:id', AlunoController.indexOne);
 routes.post('/aluno', AlunoController.store);
-routes.put('/aluno/:id', AlunoController.update);
 routes.post('/aluno/:id', AlunoController.assign);
+routes.put('/aluno/:id', AlunoController.update);
 routes.delete('/aluno/:id', AlunoController.delete);
 
 routes.get('/professor', ProfessorController.indexAll);
@@ -27,6 +27,11 @@ routes.get('/coordenador/:id', CoordenadorController.indexOne);
 routes.post('/coordenador', CoordenadorController.store);
 routes.delete('/coordenador/:id', CoordenadorController.delete);
 
+routes.get('/curso', CursoController.indexAll);
+routes.get('/curso/:id', CursoController.indexOne);
+routes.post('/curso', CursoController.store);
+routes.delete('/curso/:id', CursoController.delete);
+
 routes.get('/curso/:id_curso/disciplina', DisciplinaController.indexAll);
 routes.get('/curso/:id_curso/disciplina/:id', DisciplinaController.indexOne);
 routes.post('/curso/:id_curso/disciplina', DisciplinaController.store);
@@ -36,10 +41,5 @@ routes.get('/sala', SalaController.indexAll);
 routes.get('/sala/:numero', SalaController.indexOne);
 routes.post('/sala', SalaController.store);
 routes.delete('/sala/:numero', SalaController.delete);
-
-routes.get('/curso', CursoController.indexAll);
-routes.get('/curso/:id', CursoController.indexOne);
-routes.post('/curso', CursoController.store);
-routes.delete('/curso/:id', CursoController.delete);
 
 module.exports = routes;
