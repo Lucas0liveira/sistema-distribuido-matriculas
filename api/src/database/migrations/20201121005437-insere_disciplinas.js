@@ -8,10 +8,10 @@ module.exports = {
         nome_disciplina: 'Inteligência artificial', numero_sala: 7, id_professor: 2, created_at: new Date(), updated_at: new Date(),
       },
       {
-        nome_disciplina: 'Programação para Web', numero_sala: 2, id_professor: 3, created_at: new Date(), updated_at: new Date(),
+        nome_disciplina: 'Programação para Web', numero_sala: 2, id_professor: 5, created_at: new Date(), updated_at: new Date(),
       },
       {
-        nome_disciplina: 'Fundamentos da Teoria da Computação', numero_sala: 2, id_professor: 4, created_at: new Date(), updated_at: new Date(),
+        nome_disciplina: 'Fundamentos da Teoria da Computação', numero_sala: 2, id_professor: 5, created_at: new Date(), updated_at: new Date(),
       },
       {
         nome_disciplina: 'Empreendedorismo', numero_sala: 7, id_professor: 5, created_at: new Date(), updated_at: new Date(),

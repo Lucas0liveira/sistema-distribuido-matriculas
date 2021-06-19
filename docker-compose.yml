@@ -23,7 +23,7 @@ services:
       - ./web:/app
     depends_on: 
       - api-matriculas
-    command: bash -c "yarn && yarn serve"
+    command: bash -c "yarn && yarn serve && yarn sequelize db:drop && yarn sequelize db:create && yarn sequelize db:migrate"
 
   db:
     image: postgres
